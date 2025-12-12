@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Student Management System",
+        "role": "Full-Stack Web Application / <br> CRUD Development",
+        "link": "#"
+    },
+    {
+        "title": "Task Tracker (To-Do Web App)",
+        "role": "Frontend–Backend Integration / <br> Productivity Tool",
+        "link": "#"
+    },
+    {
+        "title": "System & Network Monitoring Tools",
+        "role": "Python Automation / <br> Security & Uptime Monitoring",
+        "link": "#"
+    },
+    {
+        "title": "Email Phishing Analyzer",
+        "role": "Cybersecurity Automation / <br> Threat Detection Tool",
+        "link": "#"
+    },
+    {
+        "title": "Amazon Price Tracker",
+        "role": "Web Scraping Automation / <br> Price Monitoring Script",
+        "link": "#"
+    },
+    {
+        "title": "SOC Lab Simulation & Threat Response",
+        "role": "SOC Workflow Design / <br> Alerting & Incident Handling",
+        "link": "#"
+    },
+    {
+        "title": "File Integrity Monitoring (FIM)",
+        "role": "System Security / <br> Integrity Validation",
+        "link": "#"
+    },
+    {
+        "title": "TCP Port Monitor with Slack Alerts",
+        "role": "Real-Time Alerting / <br> Network Availability Monitoring",
+        "link": "#"
+    },
+    {
+        "title": "Steganography-Based Secure Messaging",
+        "role": "Cryptography / <br> Hidden Communication System",
+        "link": "#"
+    },
+    {
+        "title": "Private VPN Deployment",
+        "role": "Secure Networking / <br> Remote Access Configuration",
+        "link": "#"
+    }
+]

@@ -1,0 +1,1071 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akhil — Software Engineer</title>
+  <meta name="title" content="Akhil — Software Engineer">
+  <link rel="icon" href="./favicon.ico">
+  <meta name="description" content="Software Engineer focused on building scalable web applications, automation tools, and system monitoring solutions.">
+  <meta property="og:image" content="https://res.cloudinary.com/dmwfd0zhh/image/upload/v1625786788/Portfolio/Frame_5_lchlvc.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://seyi.dev">
+  <meta property="twitter:title" content="Akhil — Software Engineer">
+  <meta property="twitter:description" content="Software Engineer focused on building scalable web applications, automation tools, and system monitoring solutions.">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmwfd0zhh/image/upload/v1625786788/Portfolio/Frame_5_lchlvc.jpg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seyi.dev">
+  <meta property="og:title" content="Akhil — Software Engineer">
+  <meta property="og:description" content="Software Engineer focused on building scalable web applications, automation tools, and system monitoring solutions.">
+  <meta property="og:image" content="https://res.cloudinary.com/dmwfd0zhh/image/upload/v1625786788/Portfolio/Frame_5_lchlvc.jpg">
+
+  <!-- script removed as we use internal Time.js with correct timezone -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+  <link rel="preload" href="./assets/opensauce-medium-DHCY1jhb.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(5, max-content);
+      /* Pack items tightly */
+      gap: 30px 80px;
+      /* 30px row gap, 80px column gap */
+      margin-top: 30px;
+      justify-content: center;
+      /* Center the packed grid */
+      justify-items: center;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-item i {
+      font-size: 4rem;
+      color: white;
+      /* B&W effect: white icon */
+      filter: grayscale(100%);
+      /* Ensure true B&W if icon has color */
+      margin-bottom: 10px;
+    }
+
+    .skill-item img {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 10px;
+      filter: grayscale(100%) brightness(200%);
+      /* Brighten B&W images for dark background */
+      object-fit: contain;
+      transition: filter 0.3s ease;
+    }
+
+    /* Hover effects removed for icons/images per request */
+
+    .skill-item span {
+      font-family: "Open Sauce", arial;
+      font-size: 0.9rem;
+      color: #aaaaaa;
+      transition: color 0.3s ease;
+    }
+
+    .skill-item:hover span {
+      color: #cb450c;
+    }
+
+    /* Minimalist Editorial Info Sections */
+    .info-section-container {
+      padding: 100px 5vw;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .editorial-row {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 40px;
+      padding: 60px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .editorial-row:hover {
+      background: rgba(255, 255, 255, 0.02);
+      padding-left: 20px;
+      padding-right: 20px;
+      border-color: #cb450c;
+    }
+
+    .editorial-row:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ed-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3rem;
+      color: #777;
+      /* Changed to grey as requested */
+      margin: 0;
+      line-height: 1;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+
+    .editorial-row:hover .ed-title {
+      color: #cb450c;
+    }
+
+    .ed-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .ed-item {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .ed-item:hover {
+      border-left-color: #cb450c;
+      transform: translateX(10px);
+    }
+
+    .ed-item:hover .ed-main-text,
+    .ed-item:hover .ed-sub-text {
+      color: #ccc;
+      /* Light colour as requested */
+      transition: color 0.3s ease;
+    }
+
+    .ed-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .ed-main-text {
+      font-family: "Open Sauce", arial;
+      font-size: 1.4rem;
+      color: #777;
+      /* Changed to grey */
+      font-weight: 600;
+    }
+
+    .ed-sub-text {
+      font-family: "Open Sauce", arial;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .ed-desc {
+      font-family: "Open Sauce", arial;
+      font-size: 1rem;
+      color: #777;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      .editorial-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+      }
+
+      .ed-title {
+        position: static;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .ed-item-header {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    /* Categorized Skills with Hover Reveal */
+    .skills-section-redesign {
+      padding: 0;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1400px;
+      margin: 50px auto;
+    }
+
+    .skill-category {
+      position: relative;
+    }
+
+    .skill-header {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 4rem;
+      /* Big impact headings */
+      color: #777;
+      /* Standard grey */
+      cursor: pointer;
+      transition: color 0.3s ease;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-header:hover {
+      color: #cb450c;
+      /* Orange on hover */
+    }
+
+    /* The Reveal Container */
+    .skill-reveal {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Reveal logic: Hovering the category makes the content appear */
+    .skill-category:hover .skill-reveal {
+      max-height: 800px;
+      /* Arbitrary large height */
+      opacity: 1;
+      padding: 40px 0;
+      margin-bottom: 40px;
+    }
+
+    /* The Grid inside the Reveal */
+    .reveal-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .reveal-grid .skill-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      transition-delay: 0.1s;
+    }
+
+    /* Force new line in flexbox */
+    .flex-break {
+      flex-basis: 100%;
+      height: 0;
+    }
+
+    .skill-category:hover .reveal-grid .skill-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .skill-header {
+        font-size: 2.5rem;
+      }
+
+      .reveal-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BOh2YEyn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C0i1kjuf.css">
+</head>
+
+<body>
+  <!-- Mobile Experience Warning -->
+  <div class="mobile-warning">
+    Best experience when viewed in Desktop
+  </div>
+  <style>
+    .mobile-warning {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #cb450c;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-family: "Open Sauce", arial;
+      font-size: 0.9rem;
+      z-index: 9999;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1024px) {
+      .mobile-warning {
+        display: block;
+      }
+
+      /* Push content down so nav isn't covered */
+      body {
+        padding-top: 40px;
+      }
+
+      /* Adjust nav position if it's fixed */
+      .home__nav {
+        top: 40px !important;
+      }
+    }
+  </style>
+
+  <main class="home" data-scroll-container="">
+    <nav class="home__nav">
+      <div class="home__nav__left">
+        <div class="nav__name" nav-anim="">
+          <span style="color: #cb450c;">
+            Kalla Bharath <br>
+            Sai Durga Akhil</span>
+        </div>
+
+        <div class="nav__folio hide-mobile" nav-anim="">
+          <span>
+            Personal Portfolio / 2026
+          </span>
+        </div>
+      </div>
+
+      <div class="home__nav__right">
+        <div class="nav__folio hide-desktop" nav-anim="">
+          Personal Portfolio / 2026
+        </div>
+
+        <div class="nav__availability" nav-anim=""></div>
+
+        <button class="nav__button c-button contact-scroll" nav-anim="">
+          <span class="c-link">
+            <span class="c-link__inner">
+              <span> contact </span>
+              <span class="c-link__animated"> contact </span>
+            </span>
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="home__hero">
+      <div class="hero__title">
+        <h1 class="mobile">
+          SOFT <br>
+          —— WARE <br>
+          ENGINEER
+        </h1>
+        <h1 class="hero__title__top overflow desktop">
+          <div class="hero__title__top" title-overflow="">
+            <span class="hero__title__left" data-scroll="" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-speed="7">
+              <span class="hero__hover">S</span>
+              <span class="hero__hover">O</span>
+              <span class="hero__hover">F</span>
+              <span class="hero__hover">T</span>
+            </span>
+            <span class="hero__title__dash desktop">——</span>
+            <span class="hero__title__dash tablet">——</span>
+
+            <span class="hero__title__right" data-scroll="" data-scroll-direction="horizontal" data-scroll-position="top" data-scroll-speed="-7">
+              <span class="hero__hover">W</span>
+              <span class="hero__hover">A</span>
+              <span class="hero__hover">R</span>
+              <span class="hero__hover">E</span>
+            </span>
+          </div>
+        </h1>
+
+        <span class="hero__title__bottom overflow">
+          <div class="hero__title__bottom">
+            <h1 class="bottom__left desktop" title-overflow="">
+              <span class="hero__hover">E</span>
+              <span class="hero__hover">N</span>
+              <span class="hero__hover">G</span>
+              <span class="hero__hover">I</span>
+              <span class="hero__hover">N</span>
+              <span class="hero__hover">E</span>
+              <span class="hero__hover">E</span>
+              <span class="hero__hover">R</span>
+            </h1>
+            <div class="bottom__right">
+              <p class="hero__paragraph">
+                <span class="first-word">About</span> &nbsp; Highly motivated Software Engineer with strong skills in
+                Python, C, SQL, JavaScript, Flask, HTML/CSS, and full-stack development. Experienced in building
+                scalable web applications, automation tools, and system monitoring solutions.
+                Strong understanding of SDLC, OOP, DSA, REST, networking, and operating systems.
+              </p>
+              <div class="hero__scroll">
+                <p>Scroll down</p>
+                <div class="c-infinite">
+                  <span class="c-link">
+                    <span class="c-link__inner">
+                      <span>
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.8333 13.9766L15.3033 9.50658L16.4816 10.6849L9.99998 17.1666L3.51831 10.6849L4.69664 9.50658L9.16664 13.9766V3.83325H10.8333V13.9766Z" fill="#777777"></path>
+                        </svg>
+                      </span>
+                      <span class="c-link__animated">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.8333 13.9766L15.3033 9.50658L16.4816 10.6849L9.99998 17.1666L3.51831 10.6849L4.69664 9.50658L9.16664 13.9766V3.83325H10.8333V13.9766Z" fill="#777777"></path>
+                        </svg>
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </section>
+
+    <section class="home__projects" data-projects-section-1=""><span class="home__projects__line left"><span></span></span><div class="home__projects__project right">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner label-1">
+         <p>FEATURED <br> PROJECTS (10)</p>
+         <p>Project No 1 <br> Full-Stack Web Application / <br> CRUD Development</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
+        <span class="inline-ovh">
+          <div class="title__main right">
+            <span class="slide-up" data-content="Student Management System" aria-hidden="true"></span>
+            Student Management System
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line right"><span></span></span><div class="home__projects__project left">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 2 <br> Frontend–Backend Integration / <br> Productivity Tool</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-8">
+        <span class="inline-ovh">
+          <div class="title__main left">
+            <span class="slide-up" data-content="Task Tracker (To-Do Web App)" aria-hidden="true"></span>
+            Task Tracker (To-Do Web App)
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line left"><span></span></span><div class="home__projects__project right">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 3 <br> Python Automation / <br> Security &amp; Uptime Monitoring</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
+        <span class="inline-ovh">
+          <div class="title__main right">
+            <span class="slide-up" data-content="System &amp; Network Monitoring Tools" aria-hidden="true"></span>
+            System &amp; Network Monitoring Tools
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line right"><span></span></span><div class="home__projects__project left">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 4 <br> Cybersecurity Automation / <br> Threat Detection Tool</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-8">
+        <span class="inline-ovh">
+          <div class="title__main left">
+            <span class="slide-up" data-content="Email Phishing Analyzer" aria-hidden="true"></span>
+            Email Phishing Analyzer
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line left"><span></span></span><div class="home__projects__project right">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 5 <br> Web Scraping Automation / <br> Price Monitoring Script</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
+        <span class="inline-ovh">
+          <div class="title__main right">
+            <span class="slide-up" data-content="Amazon Price Tracker" aria-hidden="true"></span>
+            Amazon Price Tracker
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line right"><span></span></span></section>
+
+    <section class="home__content">
+      <h2 class="home__content__title">TECHNICAL SKILLS</h2>
+      <div class="skills-section-redesign">
+
+        <!-- Category 1 -->
+        <div class="skill-category">
+          <h3 class="skill-header">PROGRAMMING &amp; DEVELOPMENT</h3>
+          <div class="skill-reveal">
+            <div class="reveal-grid">
+              <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+              <div class="skill-item"><i class="devicon-c-plain"></i><span>C</span></div>
+              <div class="skill-item"><i class="devicon-java-plain"></i><span>Java</span></div>
+              <div class="skill-item"><i class="devicon-postgresql-plain"></i><span>SQL</span></div>
+              <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+              <div class="skill-item"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+              <div class="skill-item"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+              <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+              <div class="flex-break"></div> <!-- Force break after 8th item -->
+              <div class="skill-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+              <div class="skill-item"><i class="devicon-bash-plain"></i><span>Bash</span></div>
+              <div class="skill-item"><i class="devicon-git-plain"></i><span>Git</span></div>
+              <div class="skill-item"><i class="devicon-postman-plain"></i><span>Postman</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="skill-category">
+          <h3 class="skill-header">CYBERSECURITY</h3>
+          <div class="skill-reveal">
+            <div class="reveal-grid">
+              <div class="skill-item"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+              <div class="skill-item"><i class="devicon-windows8-original"></i><span>Windows</span></div>
+              <div class="skill-item"><i class="devicon-apple-original"></i><span>MacOS</span></div>
+              <div class="skill-item"><i class="devicon-splunk-original-wordmark"></i><span>Splunk</span></div>
+              <!-- Using image fallbacks where needed or devicon if available. Retaining previous custom images. -->
+              <div class="skill-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAbFBMVEUAAAA1hfk1hfk1hfk1hfk1hfk1hfk1hfk1hfk1hfk1hfk1hflOlPpopPtbnPr///9CjfmBs/vm8P6z0f3A2f3y9/90q/unyvyNuvzZ6P6awvzN4f4yfekoZLsDCBAAAAAhU5wbQ30NIT4udNpBoIq6AAAADHRSTlMAIHC/3/9AEK8w72CfHcxzAAAA9klEQVR4AY3TVaKFMAwE0EI7OAwuz2X/a7we3M4PTqYSNbBsbXBjtG2pJUdjRDtqyvUw47lqxA+wEIx+EmJV2JfHBv9VP8CG4JnDwyZvs4C4B9XYoW/zh4UoTiAsZeMhIVMgYw6gYAFh9xVyZkBJRkDFehRTxtiwQEqyRcIKPaPkLGaFjB07NCwxUBAV44J1zuhWbPWFgk1VoeEbma6+kJEs7gH4DuCjf8HI2T1hDeT3nJ9f3z8SUkOUj/QNGeH3+/tPptKGaFk8ZqzD6A+2srDm41+m+nCxjpf7eMMcbznlY4N/vO2Fs9Y4/nHrnW/eWft74/a/Aof9F0tL6uYzAAAAAElFTkSuQmCC" alt="Wazuh" loading="lazy" decoding="async"><span>Wazuh</span></div>
+              <div class="skill-item">
+                <!-- SVG for Sysmon -->
+                <svg viewBox="0 0 24 24" fill="white" width="4rem" height="4rem" style="margin-bottom: 10px;">
+                  <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zM7 11h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 15h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z">
+                  </path>
+                </svg>
+                <span>Sysmon</span>
+              </div>
+              <div class="skill-item"><img src="./assets/snort-By3-Z2MI.jpeg" alt="Snort" loading="lazy" decoding="async"><span>Snort</span></div>
+              <div class="skill-item"><img src="data:image/png;base64,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" alt="Wireshark" loading="lazy" decoding="async"><span>Wireshark</span></div>
+              <div class="flex-break"></div> <!-- Force break after 8th item -->
+              <div class="skill-item">
+                <!-- SVG for FTK -->
+                <svg viewBox="0 0 24 24" fill="white" width="4rem" height="4rem" style="margin-bottom: 10px;">
+                  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                  </path>
+                </svg>
+                <span>FTK Imager</span>
+              </div>
+              <div class="skill-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEX////w8PCura3Y2NgAAADd3NwFAAC4t7dUUlKZl5c+PDz4+PggHR0SDAygn5+9vb1ZWVgnIyMpJiYYExPo6OgeGhojICBNS0vMzMzDsbMkISGUk5PGxcWxVV28jZEaFhZycXG8AySvNUJiYGDRGTLHDyqCgYHi4eGwXWSmMz/CHjO8mZy7ABPBoaS2bnR4d3eaeHrJnJ/Fq63HABbV396qJjXOABrSAyiqQEuxGi62KTm/AB24S1W1jI+1Eim6hIg6NzfUIjjGbEAXAAABz0lEQVR4AXxShZaDQAwMsGx12yM41M7q7i7//1OXRa76OlWSeZmJwD0UVVXgHTTG9PcE/oaQyeZiQiavFl6ki4KXYkKZCVF6SBc+uIFmShBoiLx1m7eKNqLD/is49MS1m+ZsinDXS016HxzRuLGbLyKy0rVNXy+TYlBMrYaC8pWbQVVroBGj3kgEGNVXb8f5+UUyFGWxjbCOxW+4gf/zSzpNCsclAgNZ65bQ7nR71DkZ5UrkC53sbV7pD4akASMbRZl+VUETUsa1yWA61SKFWasym4OcVz2MLXAP9MVyuVytgVBdAGy223GLoy1NNG2MRjLXvKo0Z+1qAL39gboj8zEhnaq/OgBMl178lBJIQlSSlR2penUDMXSG9kjuOfEiMVx51u4EhMR9jn5bDINzEvNWJz9VgO+idE84B8kfwmLbThUshoYZraskMMgn0dqlO7wWqDdja8JAs5kc7e9PYrjEEZmSnKNcZ+JzfSzEDikmcpBWM4nRiDKDNkg0KW+78A+3Ts9mjioqPn1Uw0Qsnm9vPyuQPDO3GYbNLDcNRDOvwC1CVkTEwK7b8oDRYSN4QOubmTIlaXWW1eAZrZwrGOdM5ENKv0bB0vW/iaDmSwCPPia6P+MvZQAAAABJRU5ErkJggg==" alt="Volatility" loading="lazy" decoding="async"><span>Volatility</span>
+              </div>
+              <div class="skill-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEUaZ60OYakNYakBWaUAV6UBWKUAU6MAVaRglcVJhb3////5+/3q8feGo8oATqGTrM84froAUaJ/qtGyx9+2zOJzos0ATKDh6/Rahrxhir6qxd8SarDH2us0bq/O3+1rkMG/0+eqv9p2l8Td5e+GrtOcudcjb7FUjMEud7aUuNnW4+8AY6xpmMeYs/hIAAABTklEQVR4AXxQh3aEMAwLYGJQcrmyb+9N///7ana3GImtJzmKUp7v+/L9sigV0J8IlEfhHyDvf9KndqM1D03Wuuv5nZKCKIq9jvPiKCL6pNQxjJ25hnNzY/DGnbIlkxRA1khJ5QCK5JNt2XSqhRaPpQWwcpMtuaaDOcmsOQSVm5S0NhBstszbHQRG0ajUcUtiqXmPlox5VCapweYgo4JgBRx2MGkyKssMOJ5E4HmA2edAVg5RiM/ApZn2FstkdQXOTL0t3yqYOx+F2ADXJDKobtzb6ruFublTm8ee3MPA3nWvTGZSab61KXaKAwszS3qlE8NDGSaywFyTsBTzzPXK4ABcXOsOKwndU6Z7nZIfL6CZkZyBs2TQEfB6cBuFly+DurmLwtp3Sc83mGqvW1sK6rrmUKDrOunXWvrtgUgQtphWGi7hY+SlPryJGm92AACKSRt5BvjorAAAAABJRU5ErkJggg==" alt="MITRE ATT&amp;CK" loading="lazy" decoding="async"><span>MITRE</span></div>
+              <div class="skill-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAATlBMVEWqv9UDNnkAC2QHKnD///8BPn7+/v+vxNnI1uP///8ABGK3xNYcOHXq8PWQpcCCm7qht8+arMREYI4AAFZ2iqrY4utebZUuSH5MdKFhgahXP61UAAAACnRSTlPy////Tv//8vxIzVZunQAAAWxJREFUKJF1U4l2hCAMNKRSagLhRv//Rxvc1e05L/KEgckY4vLhlvc/sbiPxZViJrZSNlN0UuaLohS3xLJOAO9HxnzsMPZjwFwqcXk3J4diW87NBiRLD9IsF6nryURLWL3veIptTxKw/jr4IjlYt3bv6+ps4p9kUnIqDmcD/CBPP71ZUdn4/SQgqqSwEhh0FwLCTebOU5cvXeaen6RqtoQjxoyVqukUODTB50nIzq+57of0XY5eM/jW4ZI1ye9JIoUYhaKE3Ue8cmL21gUjaQvBJDHirM945UzWWqp0h04TwoNkpzPrv4RV63C5tb/wcssSQ5oRU3iMMm63w2jFGIBn4VDHV4WAKQ2390aDI2kJkPz++pRqyQ9xc0+qvgci4vXOGW3K3hGt1FoE56K9vlPTHD5XH6gJUdP6kOj1wE0mFilDgvQjhDBK1UvVBjtbU90B6jh9MqtV5LM1z6bethn6PHAuzKbW3+EfuLdPGdEclon32OwAAAAASUVORK5CYII=" alt="YARA" loading="lazy" decoding="async"><span>YARA</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="skill-category">
+          <h3 class="skill-header">UI/UX &amp; ANALYTICS</h3>
+          <div class="skill-reveal">
+            <div class="reveal-grid">
+              <div class="skill-item"><i class="devicon-figma-plain"></i><span>Figma</span></div>
+              <div class="skill-item"><i class="devicon-canva-original"></i><span>Canva</span></div>
+              <div class="skill-item"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAHBgkIBw4KCAkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIABwAHAMBIgACEQEDEQH/xAAaAAACAgMAAAAAAAAAAAAAAAAGBwAEAwUI/8QAJxAAAQMDAwMEAwAAAAAAAAAAAQIDBAAFEQYSMQchUUFxgZITFTL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AVe+ii3dP7rc4TM2DDEiM8kLbdRLYIUPvQc47tQoj0FdH6I0s5pC3vi1znJ6H2/yJhy0hLYdIzkKTkpzwex9jQI7UGnpmm3mGr3HMJb6VKaBdQvcBjP8AKjjkc1qt9E/U3VkjUl4YYukL9NKtoW0tku7ySopOeB27DBGQQc0I76CutW5JHmmE11Kff0ZLhOvLi3ZhDYYkNnBdSHEg+ytuc+Rk+aXNSgv3G7yLs8l+6PuzXUJ2JW6ckJ5xn5NVd9YqlB//2Q==" alt="Framer" loading="lazy" decoding="async"><span>Framer</span></div>
+              <div class="skill-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAMFBMVEX///8AAAD8/PzU1NSnp6e0tLR2dnaampqNjY3ExMRkZGQ+Pj4ODg7x8fHk5OQdHR1x0gIvAAAAoUlEQVQ4je2PyQ6DMAxEPQ52yAb//7eMSytSqT1V6ok5WF6eN5Fb/9Rawqw0lhmManRTLRcAEQdIIAsW+oluvyYUJnavTRIdAtI7oe0CBpNYMiRDNYCExlmT4Owt2OouD4BL29uV3g06YPAn4NjnuhoaE5xrJ1DgZCdtiLiChwWgXLDGJ9MR7JUFfDeAGh906ASYvaxmHTmaT/tR+q1w6xcdznsDPm9kfkkAAAAASUVORK5CYII=" alt="Wix" loading="lazy" decoding="async"><span>Wix</span></div>
+              <div class="skill-item"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADhklEQVR4AWJhoBI4Xc7eD6itDjh3XbAyjP/ut4iGM2nSqFRTIwggBBEE+jLtvkjTEIA+SgCEIODIwDSVpBSVOPtdV2PMy3/Y+2A7B8uzeLAu173W81y9C4IBARUmXPeXf/QXX/w5fGUAl3c1hCkqMwEqMHuHrxagUH79D36RgOKuHo+tgH/6u//FwFcPYO5Z2wZ3VXQkGqb6OgDC1M8SbVOI0PV1GmCsEHdSXkYgvh4DGqi5q83EthV32lrtawKA6DLWDXYX2Ez79Ag+/6vvfC/egUgWSQU+++1f8c0f13/86J/937/+yGMaK0oVtk8yUN4BKUgliM++860fD/8WnV/+jW/7+89/6Fd/6bHLC8JYpXwCgCi/+ce/L1nUeeU96Y6O+OI9zGvomKbgEwBciFKHVKaJOt6aiY4KFBOfClAx6kmpEIUXQJRK8XzWY1ZA+HQDpeiOws9CKMmKounSJoAo2CcagE4dcXdtTSicUKfCw50SUcjyqd+B0h1SRxlefWVekNNl22bC9iUR/OCv//B7be8qW4qhQuCb3/2uX/j273n/Pz/0/r/+wdi9iUQ5UbrwmLhT5fF47KMAp3crgyISUD8Z/tnv/C7e+/lv/Jov/vNzCrnntRlRlMo96/HYsNJd4PoAgNL4rT/5UznD3VXnsQZ6IuBNFGN69SiXsHuqspkofBBAlHpvuHu22ZZ6LVsI1NNdPdZEHaijrI3B4N5rDyvyEQNkTp06Q840wdu8z7QuCiFdyF111rPCHla52AcBHKj3lMdaVZ2w3YhCunN3wWNW5+27scJjW3kZEH08AuppclfbbaO7LIscRS8zqbye8+rH62k268LHAEqiJ3oZQLabUscg3VNpa93bwadS6R4SwdxTnfERgMk8VXhdQuV1CXEhddQqok6iV0356Sk+Vul83EAO3PPZHk0n2VpXxKs6Om/1E6VCKpVtK2peEPmSM9yeW0l0iEJeVcedOl3ttYTQqXSv09vuWWIP68t2gOipN4OqFHsLcuooNOVVOUpN0ft6DX7tQD4IcIC3m3KUrVWvnk73pNzVY0YqxB2XbYPinl4gfHgHIrr3NurA3BQOdIcoFR2oA0o91RT3EwOvX+KX/A1Xkn/8m78FCgEFgDD//S//LowpQQH4tx88+cZgBYhk9gEDz+f3/dz+TBBQDABgoDLAvfpIRFFhBMkwd30f4P8BgCdHZe87LaAAAAAASUVORK5CYII=" alt="Power BI" loading="lazy" decoding="async"><span>Power BI</span></div>
+              <!-- Added Excel -->
+              <div class="skill-item"><img src="data:image/png;base64,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" alt="Excel" loading="lazy" decoding="async"><span>Excel</span></div>
+              <!-- Conceptual placeholder if specific icon missing, reused Windows or generic -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="home__projects" data-projects-section-2=""><span class="home__projects__line left"><span></span></span><div class="home__projects__project right">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 6 <br> SOC Workflow Design / <br> Alerting &amp; Incident Handling</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
+        <span class="inline-ovh">
+          <div class="title__main right">
+            <span class="slide-up" data-content="SOC Lab Simulation &amp; Threat Response" aria-hidden="true"></span>
+            SOC Lab Simulation &amp; Threat Response
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line right"><span></span></span><div class="home__projects__project left">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 7 <br> System Security / <br> Integrity Validation</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-8">
+        <span class="inline-ovh">
+          <div class="title__main left">
+            <span class="slide-up" data-content="File Integrity Monitoring (FIM)" aria-hidden="true"></span>
+            File Integrity Monitoring (FIM)
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line left"><span></span></span><div class="home__projects__project right">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 8 <br> Real-Time Alerting / <br> Network Availability Monitoring</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
+        <span class="inline-ovh">
+          <div class="title__main right">
+            <span class="slide-up" data-content="TCP Port Monitor with Slack Alerts" aria-hidden="true"></span>
+            TCP Port Monitor with Slack Alerts
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line right"><span></span></span><div class="home__projects__project left">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 9 <br> Cryptography / <br> Hidden Communication System</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-8">
+        <span class="inline-ovh">
+          <div class="title__main left">
+            <span class="slide-up" data-content="Steganography-Based Secure Messaging" aria-hidden="true"></span>
+            Steganography-Based Secure Messaging
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line left"><span></span></span><div class="home__projects__project right">
+      
+    <div class="home__projects__project__label">
+      <div class="label__inner">
+         <p>Project No 10 <br> Secure Networking / <br> Remote Access Configuration</p>
+       </div>
+    </div>
+      
+    <a href="#" target="_blank" rel="noopener noreferrer" class="home__projects__project__link">
+      <h1 class="home__projects__project__title" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="8">
+        <span class="inline-ovh">
+          <div class="title__main right">
+            <span class="slide-up" data-content="Private VPN Deployment" aria-hidden="true"></span>
+            Private VPN Deployment
+          </div>
+        </span>
+      </h1>
+    </a>
+      
+    <div class="project__link">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="c-button">
+        <span class="c-link">
+          <span class="c-link__inner">
+            <span>
+              Visit Site
+              <span class="share-icon">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.337 7.845l-7.173 7.173-1.178-1.179 7.172-7.172H5.837V5h9.166v9.167h-1.666V7.845z" fill="#777"></path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+    </div><span class="home__projects__line right"><span></span></span></section>
+
+    <section class="info-section-container">
+      <!-- Education -->
+      <div class="editorial-row">
+        <h2 class="ed-title">EDUCATION</h2>
+        <div class="ed-content">
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">B.Tech – CS (Cybersecurity)</span>
+              <span class="ed-sub-text">GITAM University (2022 – Present) | 7.61 CGPA</span>
+            </div>
+          </div>
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">Intermediate (MPC)</span>
+              <span class="ed-sub-text">Sri Chaitanya Junior College | 85.70%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="editorial-row">
+        <h2 class="ed-title">CERTIFICATIONS</h2>
+        <div class="ed-content">
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">Certified Ethical Hacker (CEH)</span>
+            </div>
+          </div>
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">Practical SOC Analyst Associate (PSAA)</span>
+            </div>
+          </div>
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">Google Cybersecurity Professional Certificate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internship -->
+      <div class="editorial-row">
+        <h2 class="ed-title">INTERNSHIP</h2>
+        <div class="ed-content">
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">Visakhapatnam Cybercrime Department</span>
+            </div>
+            <p class="ed-desc">Gained experience in cybercrime workflows, phishing analysis, malware investigation, and
+              digital forensics exposure.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="editorial-row">
+        <h2 class="ed-title">ACHIEVEMENTS</h2>
+        <div class="ed-content">
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">Published technical blogs on Wireshark, Tcpdump, Snort IDS.</span>
+            </div>
+          </div>
+          <div class="ed-item">
+            <div class="ed-item-header">
+              <span class="ed-main-text">CTFs: Shore Fest CTF, Hackfinity Battle, Advent of Cyber.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home__contact">
+      <p class="home__contact__desc">
+        Got a question, proposal or project or want to work together on
+        something? Feel free to reach out.
+      </p>
+      <div class="line-wrapper">
+        <span class="home__projects__line left">
+          <span></span>
+        </span>
+      </div>
+
+      <div class="marquee">
+        <a href="mailto:kallabharath2004@gmail.com?subject=Lets%20work%20together!&amp;body=Hello%2C%20I%20think%20we%20need%20you%20to%20work%20on%2Fcollaborate%20this%20particular%20product...%20Reach%20out%20as%20soon%20as%20you%20can." class="marquee__wrap">
+          <div class="marquee__inner">
+            <span aria-hidden="true" class="inner-span">
+              <span class="slide-up" data-content="LET’S TALK — LET’S COLLABORATE — SAY HELLO — WANNA BE STARTING
+                SOMETHING?" aria-hidden="true"></span>
+              LET’S TALK — LET’S COLLABORATE — SAY HELLO — WANNA BE STARTING
+              SOMETHING?</span>
+            <span class="inner-span">
+              <span class="slide-up" data-content="LET’S TALK — LET’S COLLABORATE — SAY HELLO — WANNA BE STARTING
+                SOMETHING?" aria-hidden="true"></span>
+              LET’S TALK — LET’S COLLABORATE — SAY HELLO — WANNA BE STARTING
+              SOMETHING?</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="line-wrapper">
+        <span class="home__projects__line right">
+          <span></span>
+        </span>
+      </div>
+
+      <div class="home__contact__email">
+        <a href="mailto:kallabharath2004@gmail.com" class="email">kallabharath2004@gmail.com</a>
+        <div class="social-links" style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+          <a href="https://www.linkedin.com/in/kalla-akhil/" target="_blank" style="text-decoration: none;">
+            <i class="devicon-linkedin-plain" style="font-size: 2rem; color: #777; transition: color 0.3s ease;"></i>
+          </a>
+          <a href="https://github.com/Akhi-hecker" target="_blank" style="text-decoration: none;">
+            <i class="devicon-github-original" style="font-size: 2rem; color: #777; transition: color 0.3s ease;"></i>
+          </a>
+        </div>
+        <style>
+          .social-links i:hover {
+            color: #cb450c !important;
+          }
+
+          /* Ensure the email link looks like the button did, or at least clean */
+          a.email {
+            font-family: "Open Sauce", arial;
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: #777;
+            text-decoration: none;
+            transition: color 0.3s ease;
+          }
+
+          a.email:hover {
+            color: #cb450c;
+          }
+        </style>
+      </div>
+    </section>
+
+    <footer class="home__footer" id="js-footer">
+      <div class="home__footer__center">
+        <div class="footer__links">
+          <div class="link__flex">
+            <div class="link__flex__inner">
+              <!-- Social links placeholders or keep existing/generic -->
+            </div>
+          </div>
+
+          <div class="link__flex">
+            <div class="link__flex__inner second">
+              <!-- Social links placeholders -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home__footer__left">
+        <p class="place">VISAKHAPATNAM, INDIA</p>
+        <div class="time">
+          <span data-hour=""></span>
+          <span class="flash">:</span>
+          <span data-minute=""></span>
+        </div>
+      </div>
+      <p class="home__footer__right">
+        Design by
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          Akhil
+        </a>
+        <br>
+        Credits
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          Oluwadare Oluwaseyi
+        </a>
+      </p>
+    </footer>
+  </main>
+
+
+
+
+
+
+
+
+
+</body></html>
