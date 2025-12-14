@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "Student Management System",
+        "role": "Full-Stack Web Application / <br /> CRUD Development",
+        "description": "A comprehensive system for managing student records and academic data.",
+        "link": "https://github.com/Akhi-hecker/student-management-system"
+    },
+    {
+        "id": 2,
+        "title": "Task Tracker (To-Do Web App)",
+        "role": "Frontend–Backend Integration / <br /> Productivity Tool",
+        "description": "A simple and effective tool for tracking daily tasks and to-do lists.",
+        "link": "https://github.com/Akhi-hecker/task-tracker"
+    },
+    {
+        "id": 5,
+        "title": "Amazon Price Tracker",
+        "role": "Web Scraping Automation / <br /> Price Monitoring Script",
+        "description": "A script to track product prices on Amazon and send alerts when prices drop.",
+        "link": "https://github.com/Akhi-hecker/amazon-price-tracker"
+    },
+    {
+        "id": 4,
+        "title": "Email Phishing Analyzer",
+        "role": "Cybersecurity Automation / <br /> Threat Detection Tool",
+        "description": "A tool to analyze emails for potential phishing attempts and security threats.",
+        "link": "https://github.com/Akhi-hecker/python-projects/tree/main/Email-Phishing-Analyzer"
+    },
+    {
+        "id": 6,
+        "title": "File Integrity Monitoring (FIM)",
+        "role": "System Security / <br /> Integrity Validation",
+        "description": "A security tool to monitor changes in critical files to detect unauthorized modifications.",
+        "link": "https://github.com/Akhi-hecker/python-projects/tree/main/fim-python"
+    },
+    {
+        "id": 7,
+        "title": "TCP Port Monitor with Slack Alerts",
+        "role": "Real-Time Alerting / <br /> Network Availability Monitoring",
+        "description": "A utility to monitor TCP ports and alert via Slack on status changes.",
+        "link": "https://github.com/Akhi-hecker/python-projects/tree/main/port-monitor-slack-alert"
+    },
+    {
+        "id": 8,
+        "title": "Steganography-Based Secure Messaging",
+        "role": "Cryptography / <br /> Hidden Communication System",
+        "description": "An application for secure communication using steganography techniques.",
+        "link": "https://github.com/Akhi-hecker/Steganography-App"
+    }
+]
